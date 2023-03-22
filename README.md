@@ -35,7 +35,8 @@ The script takes three inputs:
 Make sure that the anatomical atlas and the lesion masks are in the same space (e.g., MNI) and have the same dimensions and resolution (voxel size). To check voxel size in MRIcroGL, right-click on the atlas name in the Layers window &rarr; Show Header.
 
 
-<p></p>
+\
+\
 **Supplementary tools:**
 - `extract_all_atlas_rois_as_nii.m` &mdash; export anatomical ROIs from an atlas to separate `.nii` files
  - `flip_nii_files_LR.m` &mdash; flip images horizontally, in case the L-R orientation is not recognized correctly by the imaging software/image viewer; uses the `flip_lr.m` function from the [NIfTI and ANALYZE Tools](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox
