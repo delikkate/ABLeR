@@ -3,7 +3,7 @@
 This repo represents a collection of tools that were developed to characterize brain lesions of patients from the Vietnam Head Injury Study (VHIS) dataset ([Raymont et al. 2011](https://www.frontiersin.org/articles/10.3389/fneur.2011.00015/full)). 
 It aims to replace the Analysis of Brain Lesions (ABLe) software ([Solomon et al. 2007](https://www.sciencedirect.com/science/article/pii/S016926070700034X?via%3Dihub); [Makale et al. 2002](https://link.springer.com/article/10.3758/BF03195419)) that is not supported any more.
 
-The `compute_lesion_ROI_overlap.m` script produces the tables containing information about the supplied binary lesion masks, including:
+The [`compute_lesion_ROI_overlap.m`](https://github.com/delikkate/ABLeR/blob/main/compute_lesion_ROI_overlap.m) script produces the tables containing information about the supplied binary lesion masks, including:
 - the overall lesion size (in voxels) and volume (in cm<sup>3</sup>),
 - the extent of lesion overlap with different anatomical ROIs (in voxels and cm<sup>3</sup>),
 - the percentage of a lesion falling into each anatomical ROI,
@@ -38,7 +38,7 @@ Make sure that the anatomical atlas and the lesion masks are in the same space (
 \
 \
 **Supplementary tools:**
-- `extract_all_atlas_rois_as_nii.m` &mdash; export anatomical ROIs from an atlas to separate `.nii` files
- - `flip_nii_files_LR.m` &mdash; flip images horizontally, in case the L-R orientation is not recognized correctly by the imaging software/image viewer; uses the `flip_lr.m` function from the [NIfTI and ANALYZE Tools](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox
-- `resample_nii_files_1mm.m` &mdash; resample images to 1&times;1&times;1 mm; uses the `reslice_nii.m` function from the [NIfTI and ANALYZE Tools](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox
-- `split_bilateral_rois_into_LvsR.sh` &mdash; a piece of T-shell code calling the [AFNI function](https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dcalc.html) `3dcalc` to split the bilateral Brodmann ROIs into two hemispheric ROIs
+- [`extract_all_atlas_rois_as_nii.m`](https://github.com/delikkate/ABLeR/blob/main/extract_all_atlas_rois_as_nii.m) &mdash; export anatomical ROIs from an atlas to separate `.nii` files
+- [`flip_nii_files_LR.m`](https://github.com/delikkate/ABLeR/blob/main/flip_nii_files_LR.m) &mdash; flip images horizontally, in case the L-R orientation is not recognized correctly by the imaging software/image viewer; uses the `flip_lr.m` function from the [NIfTI and ANALYZE Tools](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox
+- [`resample_nii_files_1mm.m`](https://github.com/delikkate/ABLeR/blob/main/resample_nii_files_1mm.m) &mdash; resample images to 1&times;1&times;1 mm; uses the `reslice_nii.m` function from the [NIfTI and ANALYZE Tools](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox
+- [`split_bilateral_rois_into_LvsR.sh`](https://github.com/delikkate/ABLeR/blob/main/split_bilateral_rois_into_LvsR.sh) &mdash; a piece of T-shell code calling the [AFNI function](https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dcalc.html) `3dcalc` to split the bilateral Brodmann ROIs into two hemispheric ROIs
