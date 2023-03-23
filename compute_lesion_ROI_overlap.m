@@ -1,6 +1,6 @@
 % This script produces the tables containing information about the supplied
 % binary lesion masks, including:
-% 	- the overall lesion size (in voxels) and volume (in cm3),
+%   - the overall lesion size (in voxels) and volume (in cm3),
 %   - the extent of lesion overlap with different anatomical ROIs (in
 %   voxels and cm3),
 %   - the percentage of a lesion falling into each anatomical ROI,
@@ -166,7 +166,7 @@ save(atlas_name)
 
 
 %% Step 6. Quality control
-% Make sure the generated summary table produces the same result as the
+% Make sure the generated summary tables produce the same result as the
 % ones generated manually with MRIcroGL. Visually inspect the overlap
 % between lesion masks and anatomical ROIs as a sanity check.
 
