@@ -17,7 +17,7 @@ sudo xattr -r -d com.apple.quarantine LOCATION_OF_SPM
 sudo find LOCATION_OF_SPM -name \*.mexmaci64 -exec spctl --add {} \;
 ```
 
-Copy and paste the anatomical atlas (both the `.nii` and the `.xml`) you want to use to `spm12/atlas` or `spm12/tpm`. A few atlases in the MNI space are provided with this code in the subfolder [MNI_atlases](https://github.com/delikkate/ABLeR/tree/main/MNI_atlases), including:
+Copy and paste the anatomical atlas (both the `.nii` and the `.xml`) you want to use to `spm12/atlas` or `spm12/tpm`. A few atlases in the MNI space are provided with this code in the subfolder ["MNI_atlases"](https://github.com/delikkate/ABLeR/tree/main/MNI_atlases), including:
 - three versions of the [AAL atlas](https://search.kg.ebrains.eu/instances/Dataset/f8758eda-483e-45fe-8a88-a1fc806dde18) for SPM:
 	- AAL (2&times;2&times;2 mm voxels)
 	- AAL3v1 (2&times;2&times;2 mm voxels)
@@ -38,7 +38,7 @@ Make sure that the anatomical atlas and the lesion masks are in the same space (
 \
 \
 **Supplementary tools:**
-- [`extract_all_atlas_rois_as_nii.m`](https://github.com/delikkate/ABLeR/blob/main/extract_all_atlas_rois_as_nii.m) &mdash; export anatomical ROIs from an atlas to separate `.nii` files; the output of running this function on [brodmann.nii](https://github.com/delikkate/ABLeR/blob/main/MNI_atlases/brodmann.nii) is stored in the subfolder ["ROIs_Brodmann"](https://github.com/delikkate/ABLeR/tree/main/ROIs_brodmann)
+- [`extract_all_atlas_rois_as_nii.m`](https://github.com/delikkate/ABLeR/blob/main/extract_all_atlas_rois_as_nii.m) &mdash; export anatomical ROIs from an atlas to separate `.nii` files; the output of running this function on [brodmann.nii](https://github.com/delikkate/ABLeR/blob/main/MNI_atlases/brodmann.nii) is stored in the subfolder ["ROIs_brodmann"](https://github.com/delikkate/ABLeR/tree/main/ROIs_brodmann)
 - [`flip_nii_files_LR.m`](https://github.com/delikkate/ABLeR/blob/main/flip_nii_files_LR.m) &mdash; flip images horizontally, in case the L-R orientation is not recognized correctly by the imaging software/image viewer; uses the `flip_lr.m` function from the [Tools for NIfTI and ANALYZE Image](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox
-- [`resample_nii_files_1mm.m`](https://github.com/delikkate/ABLeR/blob/main/resample_nii_files_1mm.m) &mdash; resample images to 1&times;1&times;1 mm; uses the `reslice_nii.m` function from the [Tools for NIfTI and ANALYZE Image](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox; the output of running this function on the files stored in the subfolder ["ROIs_Brodmann"](https://github.com/delikkate/ABLeR/tree/main/ROIs_brodmann) is located in the same folder
+- [`resample_nii_files_1mm.m`](https://github.com/delikkate/ABLeR/blob/main/resample_nii_files_1mm.m) &mdash; resample images to 1&times;1&times;1 mm; uses the `reslice_nii.m` function from the [Tools for NIfTI and ANALYZE Image](https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) toolbox; the output of running this function on the files stored in the subfolder ["ROIs_brodmann"](https://github.com/delikkate/ABLeR/tree/main/ROIs_brodmann) is located in the same folder
 - [`split_bilateral_rois_into_LvsR.sh`](https://github.com/delikkate/ABLeR/blob/main/split_bilateral_rois_into_LvsR.sh) &mdash; a piece of T-shell code calling the [AFNI function](https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dcalc.html) `3dcalc` to split the bilateral Brodmann ROIs into two hemispheric ROIs
