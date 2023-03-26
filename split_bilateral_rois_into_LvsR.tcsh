@@ -3,7 +3,7 @@
 # created by KD
 # last update 2023-02-14
 
-# This little piece of code splits each bilateral Brodmann ROI into two hemispheric ROIs using the AFNI function 3dcalc.
+# This little piece of code splits each bilateral Brodmann ROI into two hemispheric ROIs using the AFNI function 3dcalc. 
 
 cd ~/Github_code/ABLeR/ROIs_brodmann
 
